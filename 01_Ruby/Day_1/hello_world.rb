@@ -25,4 +25,9 @@ end
 
 # Or using blocks
 (1..10).each { |i| puts "This is sentence number #{i}" }
-1.upto(10) { |i| puts "This is sentence number #{i}" }
+
+# Typical Ruby convention is to use braces when your code block is on one line
+# and use the do/end form when the code blocks span more than one line.
+1.upto(10) do |i|
+  puts "This is sentence number #{i}"
+end
