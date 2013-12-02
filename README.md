@@ -1,4 +1,4 @@
-7Languages7Weeks
-================
+Seven Languages in Seven Weeks
+==============================
 
-Exercises from the Book "Seven Languages In Seven Weeks" by Bruce Tate
+Exercises from the Book "Seven Languages in Seven Weeks" by Bruce Tate
