@@ -2,7 +2,7 @@
 #          FILE:  fibonacci.io
 #   DESCRIPTION:  Seven Languages in Seven Weeks - Io - Day 2 Exercises
 #        AUTHOR:  Adam Walz <adam@adamwalz.net>
-#       VERSION:  1.0.0
+#       VERSION:  1.0.1
 #
 # A Fibonacci sequence starts with two 1s.
 # Each subsequent number is the sum of the two numbers that came before:
@@ -26,6 +26,11 @@ Fibonacci fibRecursive := method(n,
   if(n==0, 0, if(n==1, 1, fibRecursive(n-1) + fibRecursive(n-2)))
 )
 
+# From what I've read, Io does not support tail-call elimination,
+# so I wanted to test it for myself.
+# Seeing as this version runs as fast as fibLoop means that either
+# Io does in fact have tail-call elimination, or a similar optimization
+# tl;dr This is way better
 Fibonacci fibTailRecursive := method(n,
   fibInnner := method(a, b, n,
     if(n==0, a, if(n==1, b, fibInnner(b, a+b, n-1)))
